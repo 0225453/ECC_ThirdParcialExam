@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c7cc4e84ef.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!---          Barra           -->
+    <div class="row">
+        <div class="col barra centered">
+            <img class="img-fluid" src="images/logo.png">
+        </div>
+    </div>
+    <!--          Form             -->
+    <div class="container centered">
+        <div class="row mt-5 top-row">
+            <div class="col">
+                <form class="form-inline centered" action="/" method="POST">
+                    <input class="form-control mr-3" type="text" name="pokemonName" placeholder="Search your pokemon!"
+                        aria-label="Search">
+                    <button class="btn" type="submit" style="background-color: #ffc648; color: white;">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--        Buttons          -->
+    <div class="container centered">
+        <div class="row mt-4">
+            <div class="col text-right">
+                <form action="/prev" method="POST">
+                    <button class="btn nextBtn" type="submit"><i class="fas fa-angle-double-left"></i></button>
+                </form>
+            </div>
+            <div class="col text-left">
+                <form action="/next" method="POST">
+                    <button class="btn nextBtn" type="submit"><i class="fas fa-angle-double-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--       Pokedata       -->
+    <div class="container mt-4" >
+        <div class="row">
+            <div class="col bg mr-5">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="centered" style="font-size: 50px;"><%= name.charAt(0).toUpperCase() + name.slice(1);%> </h5>
+                    </div>
+                    <div class="col" style="margin-top: -30px;">
+                        <img class="centered" src="<%= icon %>" width="100px">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="centered" style="font-size: 25px; color: cadetblue;"># <%= id%> </p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <% for(let i = 0; i < types.length; i++) { %>
+                      <% if(types[i]=="bug"){ %> 
+                        <button class="btn centered bug"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="dark"){ %> 
+                        <button class="btn centered dark"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="dragon"){ %> 
+                        <button class="btn centered dragon"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="electric"){ %> 
+                        <button class="btn centered electric"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="fairy"){ %> 
+                        <button class="btn centered fairy"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="fighting"){ %> 
+                        <button class="btn centered fight"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="fire"){ %> 
+                        <button class="btn centered fire"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="flying"){ %> 
+                        <button class="btn centered fly"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="ghost"){ %> 
+                        <button class="btn centered ghost"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="grass"){ %> 
+                        <button class="btn centered grass"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="ground"){ %> 
+                        <button class="btn centered ground"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="ice"){ %> 
+                        <button class="btn centered ice"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="normal"){ %> 
+                        <button class="btn centered normal"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="poison"){ %> 
+                        <button class="btn centered poison"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="psychic"){ %> 
+                        <button class="btn centered psychic"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="rock"){ %> 
+                        <button class="btn centered rock"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="steel"){ %> 
+                        <button class="btn centered steel"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                      <% if(types[i]=="water"){ %> 
+                        <button class="btn centered water"><%= types[i].charAt(0).toUpperCase() + types[i].slice(1); %></button>
+                      <% } %>
+                    <% } %>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <p class="centered" style="font-size: 25px;"><%= weight/10 %> KG</p>
+                    </div>
+                    <div class="col">
+                        <p class="centered" style="font-size: 25px;"><%= height/10 %> M</p>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <p style="font-size: 20px;">EXP <%= experience %> </p>
+                    </div>
+                    <div class="col">
+                        <progress value="<%= experience%>" max="500"></p></progress>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <p style="font-size: 20px;color: cadetblue;">CURRENT ABILITIES: </p>
+                    </div>
+                </div>
+                <% for(let i = 0; i < abilities.length; i++) { %>
+                    <div class="row ml-2">
+                        <button class="btn abilities mt-1 "><%= abilities[i].charAt(0).toUpperCase() + abilities[i].slice(1); %></button>
+                    </div>
+                <% } %>
+            </div>
+            <div class="col bg">
+                <div class="row">
+                    <div class="col">
+                        <p class="centered" style="color: cadetblue; font-size: 30px;">3D MODEL</p>
+                        <img class="centered img-fluid" src="<%= image %>" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col bg">
+                <p class="centered" style="color: cadetblue;font-size: 30px;">MOVES</p>
+                <div class="row ml-2 moves">
+                    <% for(let i = 0; i < moves.length; i++) { %>
+                            <% let m=moves[i].replace("-"," ") %> 
+                            <% m = m.charAt(0).toUpperCase() + m.slice(1);  %> 
+                            <button class="btn abilities mt-1 mr-2"><%= m %></button>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

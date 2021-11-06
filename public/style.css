@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    overflow-x: hidden;
+    background-image: url("../images/bground.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 400px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.centered{
+    margin-left: auto;
+    margin-right: auto; 
+    display: block;
+    text-align: center;
+}
+.barra{
+    background-color: #daaf67;
+}
+.top-row{
+    padding: 3%;
+    background-color: #e29000;
+    height: 7%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 25px;
+}
+.nextBtn{
+    background-color: #c77321;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.bg{
+    padding: 3%;
+    background-color: #535353;
+    border-radius: 25px;
+    color: white;
+}
+.bug{
+    background-color: #84c400;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.dark{
+    background-color: #5b5366;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.dragon{
+    background-color: #006fca;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.electric{
+    background-color: #fbd200;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.fairy{
+    background-color: #fb8aec;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.fight{
+    background-color: #e12c6a;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.fire{
+    background-color: #ff983f;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.fly{
+    background-color: #8aace4;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.ghost{
+    background-color: #4b6ab3;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.grass{
+    background-color: #35c04a;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.ground{
+    background-color: #e97333;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.ice{
+    background-color: #4bd2c1;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.normal{
+    background-color: #929ba3;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.poison{
+    background-color: #b667cf;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.psychic{
+    background-color: #ff6676;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.rock{
+    background-color: #c9b787;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.steel{
+    background-color: #5a8fa3;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+.water{
+    background-color: #3393dd;
+    border-radius: 25px;
+    color: white;
+    pointer-events: none;
+}
+progress {
+    -webkit-appearance: none;
+    border-radius: 25px;
+  }
+  
+progress::-webkit-progress-bar {
+    border-radius: 25px;
+    background-color: white;
+}
+progress::-webkit-progress-value {
+    background: yellowgreen;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.abilities{
+    border-radius: 25px;
+    background-color: #e29000;
+    color: white;
+    pointer-events: none;
+
+}
+.moves{
+    overflow: scroll;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden; 
+}
+
+.moves::-webkit-scrollbar {
+  width: 20px;
+}
+
+.moves::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px yellow; 
+  border-radius: 10px;
+}
+ 
+.moves::-webkit-scrollbar-thumb {
+  background: #daaf67; 
+  border-radius: 10px;
+}
+
+.moves::-webkit-scrollbar-thumb:hover {
+  background: #ac6d00; 
+}
